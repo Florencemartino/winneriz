@@ -1,0 +1,34 @@
+Hello, this is your players : <br>
+<% if @members.empty? %>
+  <%= 'no one in your team' %>
+<% end %>
+
+<body>
+  <button id="clickme" class="btn btn-primary btn-circle btn-xl">
+    Choisir un prochain winner!
+  </button> <br> <br>
+  <button id="team" class="btn btn-primary btn-circle btn-xl">
+    Afficher ma team!
+  </button>
+</body> 
+
+
+<div class="show_winner" style="display: none">
+  And the winner is : 
+  <%= @members.sample %>
+</div>
+
+<div class="show_team" style="display: none">
+  This is your team mates : <br>
+  <% @members.each do |member| %>
+    <%= member %> <br>
+  <% end %>
+</div>
+
+<div>
+  <%= link_to'retour', root_path %>
+</div>
+
+
+
+

@@ -1,0 +1,13 @@
+<div>
+  <h3> Hello ! </h3>
+
+  <p> Choisi ton équipe : </p>
+
+  <% @teams.each do |team| %>
+    <%= link_to team.team_name, teams_show_path(team) %> <br>
+  <% end %>
+</div>
+
+<div>
+  <%= link_to'Créer une nouvelle Team', teams_new_path %>
+</div>
